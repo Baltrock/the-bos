@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
 
   # validates :email, presence: true
-  validates :admin, inclusion: [true]
+  validates :is_admin, inclusion: [true]
   # validates :is_user, inclusion: [true]
   validates :email, format: { with: /\A.*@.*\.com\z/ }
   validates :password, uniqueness: false

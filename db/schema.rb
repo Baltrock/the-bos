@@ -20,28 +20,33 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_06_140304) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.boolean "is_admin", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "dashbaord_forms", force: :cascade do |t|
+  create_table "dashboard_forms", force: :cascade do |t|
     t.string "company_name"
     t.string "company_address"
+    t.string "representative_name"
     t.integer "phone_number"
-    t.integer "pounds_per_litre"
+    t.integer "pence_per_litre"
     t.string "comment"
+    t.datetime "date_of_call", precision: nil
     t.integer "rating"
     t.bigint "admin_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["admin_id"], name: "index_dashbaord_forms_on_admin_id"
+    t.index ["admin_id"], name: "index_dashboard_forms_on_admin_id"
   end
 
   create_table "information_forms", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.integer "phone_number"
+    t.integer "mobile"
     t.integer "fuel_capacity"
     t.integer "current_content"
     t.integer "fuel_needed"
@@ -69,6 +74,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_06_140304) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "dashbaord_forms", "admins"
+  add_foreign_key "dashboard_forms", "admins"
   add_foreign_key "information_forms", "users"
 end

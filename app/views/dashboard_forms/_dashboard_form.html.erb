@@ -1,0 +1,40 @@
+<div class="box">
+  <div class="row">
+
+    <div class="card">
+      <div id="<%= dom_id dashboard_form %>">
+        <%# <p> %>
+          <%# <strong>Company name:</strong> %>
+          <%= dashboard_form.company_name %> <br>
+        <%# </p> %>
+
+        <%# <p> %>
+          <%# <strong>Representative Name:</strong> %>
+          <%= dashboard_form.representative_name %> <br>
+        <%# </p> %>
+
+        <%# <p> %>
+          <%# <strong>Phone number:</strong> %>
+          <%= dashboard_form.phone_number %> <br>
+        <%# </p> %>
+
+        <%# <p> %>
+          <%# <strong>Pence per litre:</strong> %>
+          <%= dashboard_form.pence_per_litre %>p <br>
+        <%# </p> %>
+
+        <%# <p> %>
+          <%# <strong>Comment:</strong> %>
+          <%= dashboard_form.comment %> <br>
+        <%# </p> %>
+
+        <%# <p> %>
+          <%# <strong>Date of Call:</strong> %>
+          <%= dashboard_form.date_of_call.strftime('%H:%M:%S') %> <br>
+        <%# </p> %>
+
+      </div>
+      <%= link_to "Edit", dashboard_form %>
+    </div>
+  </div>
+</div>

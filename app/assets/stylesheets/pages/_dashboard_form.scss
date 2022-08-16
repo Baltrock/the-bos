@@ -1,0 +1,97 @@
+.card {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  align-content: center;
+  // background-color: aqua;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 180px;
+}
+
+.box //this is the outer box
+{
+  padding: 10px;
+  width: 200px;
+  height: fit-content;
+  grid-gap: 10px;
+  background-color: #01FFFF;
+  margin: 4px;
+}
+
+.syndicator_info {
+  background-color: rgb(124, 45, 124);
+  color: white;
+  padding: 20px;
+}
+
+.major_container {
+  padding: 20px;
+  margin: 10px;
+}
+
+.big_number{
+  text-align: center;
+  padding: 10px;
+}
+
+.chicken {
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+  width: fit-content;
+}
+
+.new_company {
+  background-color: aquamarine;
+}
+
+.card2 {
+  height: fit-content;
+  padding: 30px;
+  width: 250px;
+  background-color: green;
+}
+
+.row {
+  background-color: green;
+  display: flex;
+  align-content: center;
+  margin: auto 0;
+}
+
+.row2 {
+  background-color: green;
+  display: flex;
+  width: fit-content;
+  align-content: center;
+  margin: auto 0;
+}
+
+.container {
+  background-color: rgb(255, 249, 127);
+  display: grid flex;
+  width: fit-content;
+}
+
+.container2 {
+  // align-content: center;
+  margin: auto 0;
+  padding: 20px;
+}
+
+@media(max-width: 992px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.box {
+  display: inline-flex;
+}

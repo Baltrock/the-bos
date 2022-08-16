@@ -2,3 +2,28 @@
 .index {
   background-color: #99CC01;
 }
+.intro_box {
+  height: fit-content;
+}
+
+.which_root {
+  padding: 20px;
+  width: 500px;
+  grid-gap: 16px;
+  align-content: center;
+  margin: auto 0;
+}
+
+.user {
+  background-color: aquamarine;
+  width: fit-content;
+  margin: 10px;
+  color: black;
+}
+
+.admin {
+  background-color: bisque;
+  width: fit-content;
+  margin: 10px;
+  color: black;
+}

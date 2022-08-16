@@ -1,48 +1,48 @@
 require "test_helper"
 
-class DashbaordFormsControllerTest < ActionDispatch::IntegrationTest
+class DashboardFormsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @dashbaord_form = dashbaord_forms(:one)
+    @dashboard_form = dashboard_forms(:one)
   end
 
   test "should get index" do
-    get dashbaord_forms_url
+    get dashboard_forms_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_dashbaord_form_url
+    get new_dashboard_form_url
     assert_response :success
   end
 
-  test "should create dashbaord_form" do
-    assert_difference("DashbaordForm.count") do
-      post dashbaord_forms_url, params: { dashbaord_form: { admin_id: @dashbaord_form.admin_id, comment: @dashbaord_form.comment, company_address: @dashbaord_form.company_address, company_name: @dashbaord_form.company_name, phone_number: @dashbaord_form.phone_number, pounds_per_litre: @dashbaord_form.pounds_per_litre, rating: @dashbaord_form.rating } }
+  test "should create dashboard_form" do
+    assert_difference("dashboardForm.count") do
+      post dashboard_forms_url, params: { dashboard_form: { admin_id: @dashboard_form.admin_id, comment: @Dashboard_form.comment, company_address: @Dashboard_form.company_address, company_name: @Dashboard_form.company_name,  phone_number: @Dashboard_form.phone_number, pence_per_litre: @Dashboard_form.pence_per_litre, date_of_call: @Dashboard_form.date_of_call, rating: @Dashboard_form.rating } }
     end
 
-    assert_redirected_to dashbaord_form_url(DashbaordForm.last)
+    assert_redirected_to dashboard_form_url(DashboardForm.last)
   end
 
-  test "should show dashbaord_form" do
-    get dashbaord_form_url(@dashbaord_form)
+  test "should show dashboard_form" do
+    get dashboard_form_url(@dashboard_form)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_dashbaord_form_url(@dashbaord_form)
+    get edit_dashboard_form_url(@dashboard_form)
     assert_response :success
   end
 
-  test "should update dashbaord_form" do
-    patch dashbaord_form_url(@dashbaord_form), params: { dashbaord_form: { admin_id: @dashbaord_form.admin_id, comment: @dashbaord_form.comment, company_address: @dashbaord_form.company_address, company_name: @dashbaord_form.company_name, phone_number: @dashbaord_form.phone_number, pounds_per_litre: @dashbaord_form.pounds_per_litre, rating: @dashbaord_form.rating } }
-    assert_redirected_to dashbaord_form_url(@dashbaord_form)
+  test "should update Dashboard_form" do
+    patch dashboard_form_url(@dashboard_form), params: { dashboard_form: { admin_id: @dashboard_form.admin_id, comment: @dashboard_form.comment, company_address: @dashboard_form.company_address, company_name: @dashboard_form.company_name, representative_name: @Dashboard_form.representative_name, phone_number: @dashboard_form.phone_number, pence_per_litre: @dashboard_form.pence_per_litre, date_of_call @Dashboard_form.date_of_call, rating: @dashboard_form.rating } }
+    assert_redirected_to dashboard_form_url(@dashboard_form)
   end
 
-  test "should destroy dashbaord_form" do
-    assert_difference("DashbaordForm.count", -1) do
-      delete dashbaord_form_url(@dashbaord_form)
+  test "should destroy dashboard_form" do
+    assert_difference("dashboardForm.count", -1) do
+      delete dashboard_form_url(@dashboard_form)
     end
 
-    assert_redirected_to dashbaord_forms_url
+    assert_redirected_to dashboard_forms_url
   end
 end

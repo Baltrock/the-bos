@@ -1,0 +1,38 @@
+<% if current_admin.present? && current_admin.id == @dashboard_form.admin_id %>
+<div class="container mt-3">
+    <div class="flex-row text-center car-info" style="background-color: white; width: 49%">
+      <ul id="lists">
+        <li class="list"> <strong>Company Name: </strong> <%= @dashboard_form.company_name %></em></li>
+        <li class="list"> <strong> Representative Name: </strong> <%= @dashboard_form.representative_name %></li>
+        <li class="list"><strong>Pence Per Litre:</strong> <%= @dashboard_form.pence_per_litre %></li>
+        <li class="list"><strong>Comment: </strong> <%= @dashboard_form.comment %></li>
+      </ul>
+    </div>
+  </div>
+<% else%>
+  <div class="container mt-3">
+    <div class="flex-row text-center car-info" style="background-color: white; width: 49%">
+      <ul id="lists">
+        <li class="list"> <strong>Company Address: </strong> <%= @dashboard_form.company_address %></em></li>
+        <li class="list"> <strong> Phone Number: </strong> <%= @dashboard_form.phone_number %></li>
+        <li class="list"><strong>Date of Call: </strong> <%= @dashboard_form.date_of_call %></li>
+        <li class="list"><strong>Rating: </strong> <%= @dashboard_form.rating %></li>
+      </ul>
+    </div>
+   </div>
+<% end %>
+  <br>
+  </div>
+</div>
+
+
+<p style="color: green"><%= notice %></p>
+
+    <div class="flex-row text-center car-info" style="background-color: white; width: 49%">
+      <ul id="lists">
+        <li class="list"> <strong>Company Name: </strong> <%= @dashboard_form.company_name %></em></li>
+        <li class="list"> <strong> Representative Name: </strong> <%= @dashboard_form.representative_name %></li>
+        <li class="list"><strong>Date of Call: </strong> <%= @dashboard_form.date_of_call %></li>
+        <li class="list"><strong>Comment: </strong> <%= @dashboard_form.comment %></li>
+      </ul>
+    </div>
