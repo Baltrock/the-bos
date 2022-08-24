@@ -11,6 +11,7 @@ class AdminController < ApplicationController
   def show
     @fuel_limit.all
     @dashboard_form.all
+    @information_form.all
   end
 
   # GET /user/1/edit

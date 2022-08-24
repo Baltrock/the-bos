@@ -17,7 +17,7 @@ class InformationFormsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create information_form" do
     assert_difference("InformationForm.count") do
-      post information_forms_url, params: { information_form: { address: @information_form.address, comment: @information_form.comment, current_content: @information_form.current_content, fuel_capacity: @information_form.fuel_capacity, fuel_needed: @information_form.fuel_needed, instructions_for_delivery: @information_form.instructions_for_delivery, name: @information_form.name, user_id: @information_form.user_id } }
+      post information_forms_url, params: { information_form: { address: @information_form.address, comment: @information_form.comment, fuel_needed: @information_form.fuel_needed, instructions_for_delivery: @information_form.instructions_for_delivery, name: @information_form.name, user_id: @information_form.user_id } }
     end
 
     assert_redirected_to information_form_url(InformationForm.last)
@@ -34,7 +34,7 @@ class InformationFormsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update information_form" do
-    patch information_form_url(@information_form), params: { information_form: { address: @information_form.address, comment: @information_form.comment, current_content: @information_form.current_content, fuel_capacity: @information_form.fuel_capacity, fuel_needed: @information_form.fuel_needed, instructions_for_delivery: @information_form.instructions_for_delivery, name: @information_form.name, user_id: @information_form.user_id } }
+    patch information_form_url(@information_form), params: { information_form: { address: @information_form.address, comment: @information_form.comment, fuel_needed: @information_form.fuel_needed, instructions_for_delivery: @information_form.instructions_for_delivery, name: @information_form.name, user_id: @information_form.user_id } }
     assert_redirected_to information_form_url(@information_form)
   end
 

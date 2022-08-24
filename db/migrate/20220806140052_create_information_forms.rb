@@ -5,8 +5,6 @@ class CreateInformationForms < ActiveRecord::Migration[7.0]
       t.string :address
       t.integer :phone_number
       t.integer :mobile
-      t.integer :fuel_capacity
-      t.integer :current_content
       t.integer :fuel_needed
       t.string :instructions_for_delivery
       t.string :comment

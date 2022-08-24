@@ -25,38 +25,41 @@
               <%= f.input :status, as: :hidden, input_html: { value: params[:status][:status]} %>
               <% end %>
               <% if params[:status] && params[:status][:status] == "user" %>
-                <%# <%= f.input :is_admin?, disabled: false, %>
-                      <%# required: true, %>
-                      <%# autofocus: true, %>
-                      <%# input_html: { checked: true , style: "display: none;" }%>
+
               <% elsif params[:user] && params[:user][:status]  == "admin" %>
-                <%= f.input :is_admin, disabled: false,
+                <%= f.input :admin, disabled: false,
                       required: true,
                       autofocus: true,
                       input_html: { checked: true , style: "display: none;" }%>
               <% end %>
               <%# <div class="row">
-            <div class="col-6">
+              <div class="col-6">
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                           input_html: { autocomplete: "new-password" } %>
-            <%# </div> %>
-            <%# <div class="col-6"> %>
+              <%# </div> %>
+              <%# <div class="col-6"> %>
               <%# <%= f.input :password_confirmation, %>
                           <%# required: true, %>
                           <%# input_html: { autocomplete: "new-password" } %>
 
+                    <%# <%= f.input :is_admin?, disabled: false, %>
+                      <%# required: true, %>
+                      <%# autofocus: true, %>
+                      <%# input_html: { checked: true , style: "display: none;" }%>
+
              </div>
-            </div>
-            <br>
+              </div>
+              <br>
 
               <div class="form-actions", style="width: 380px; margin: auto;">
-                <%= f.button :submit, "SIGN UP", :class => "purple-login-button text:uppercase" %>
+                <%= f.submit "SIGN UP", :class => "purple-login-button text:uppercase" %>
+                <%# <%= f.submit "Sign up", ........%>
                   <% if current_user == "user" %>
-                    <%= link_to "Back to the Home Page", user_root, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+                    <%= link_to user_root %>
                   <% elsif current_user == "admin" %>
-                    <%= link_to "Back to the Home Page", admin_root, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+                    <%= link_to admin_root %>
                   <% end %>
 
                 <br>

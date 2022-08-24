@@ -16,8 +16,6 @@ class InformationFormsTest < ApplicationSystemTestCase
 
     fill_in "Address", with: @information_form.address
     fill_in "Comment", with: @information_form.comment
-    fill_in "Current content", with: @information_form.current_content
-    fill_in "Fuel capacity", with: @information_form.fuel_capacity
     fill_in "Fuel needed", with: @information_form.fuel_needed
     fill_in "Instructions for delivery", with: @information_form.instructions_for_delivery
     fill_in "Name", with: @information_form.name
@@ -34,8 +32,6 @@ class InformationFormsTest < ApplicationSystemTestCase
 
     fill_in "Address", with: @information_form.address
     fill_in "Comment", with: @information_form.comment
-    fill_in "Current content", with: @information_form.current_content
-    fill_in "Fuel capacity", with: @information_form.fuel_capacity
     fill_in "Fuel needed", with: @information_form.fuel_needed
     fill_in "Instructions for delivery", with: @information_form.instructions_for_delivery
     fill_in "Name", with: @information_form.name

@@ -10,7 +10,7 @@
     <div class="chicken">
       <div class="row2">
         <div class="syndicator_info col-12 col-lg-10">
-          THIS IS FOR USER INFORMATION!This is some random text that doesn't really matter but it is fun to type all of this I am questioning if this is a productive period in my life but I guess only time will tell!
+            <%= render information_form %>
         </div>
 
       <div class="col-12 col-lg-2">
@@ -28,12 +28,12 @@
   <div class="container2">
     <div class="row">
       <div class="card2 col-6 col-lg-3">
-        <strong>Company Name</strong><br>
-        <strong>Representative Name</strong><br>
-        <strong>Phone Number</strong><br>
-        <strong>Pence Per Litre</strong><br>
-        <strong>Comment</strong><br>
-        <strong>Date of Call</strong>
+        <strong>Company Name:</strong><br>
+        <strong>Representative Name:</strong><br>
+        <strong>Phone Number:</strong><br>
+        <strong>Pence Per Litre:</strong><br>
+        <strong>Date of Call:</strong><br>
+        <strong>Comment:</strong>
         <br>
         <%= link_to "New company", new_dashboard_form_path, class: "btn btn-pink text-light text-uppercase rounded-pill fw-bold py-3 px-5" %>
       </div>

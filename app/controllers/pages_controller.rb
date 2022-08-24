@@ -20,7 +20,6 @@ class PagesController < ApplicationController
   end
 
   def set_password
-   #set the user password in this method and after successful completion redirect to login page where before filter your_order will be called
   end
 
   def admin_zone

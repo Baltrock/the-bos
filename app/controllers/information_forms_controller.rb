@@ -8,7 +8,7 @@ class InformationFormsController < ApplicationController
 
   # GET /information_forms/1 or /information_forms/1.json
   def show
-    authorize @fuel_needed
+    @information_forms = InformationForm.all
   end
 
   # GET /information_forms/new
@@ -66,6 +66,6 @@ class InformationFormsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def information_form_params
-      params.require(:information_form).permit(:name, :address, :fuel_capacity, :current_content, :fuel_needed, :instructions_for_delivery, :comment, :is_admin)
+      params.require(:information_form).permit(:name, :address, :fuel_needed, :instructions_for_delivery, :comment)
     end
 end

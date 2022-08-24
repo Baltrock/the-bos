@@ -5,6 +5,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
   end
 
+  def ActionController
+  end
+
   def after_sign_in_path(resource)
     if resource.is_admin
       :admins_path
