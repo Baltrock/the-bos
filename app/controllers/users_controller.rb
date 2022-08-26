@@ -1,4 +1,3 @@
-
 class UsersController < ApplicationController
   before_action :set_information_form, only: %i[ show edit update destroy ]
 

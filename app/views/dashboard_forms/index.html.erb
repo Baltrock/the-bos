@@ -10,8 +10,12 @@
     <div class="chicken">
       <div class="row2">
         <div class="syndicator_info col-12 col-lg-10">
+          <div id="information_forms">
+          <% @information_forms.each do |information_form| %>
             <%= render information_form %>
+          <% end %>
         </div>
+      </div>
 
       <div class="col-12 col-lg-2">
         <div class="big_number">
