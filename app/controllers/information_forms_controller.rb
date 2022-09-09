@@ -8,11 +8,7 @@ class InformationFormsController < ApplicationController
       @information_forms = Information_forms.where(user: current_user)
     end
   end
-    # @information_forms = InformationForm.all
-    # @information_forms = policy_scope(InformationForm)
-    # If current_user.admin?
-    #   @information_forms = Information_form.all
-    #   @information_forms = Information_forms.where(user: current_user)
+    @information_forms = InformationForm.all
 
   def show
     @information_forms = InformationForm.all
