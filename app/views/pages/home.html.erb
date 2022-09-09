@@ -10,32 +10,23 @@
 <div class="background2">
   <div class="index">
     <% if current_user.present? == false %>
-    <%# <div class="button">
-        <%= link_to "Admin Log In", admin_session_path, class: "nav-link" %>
-      <%# </div> %>
-      <%# <div class="button"> %>
-          <%# <%= link_to "User Log In", user_session_path, class: "nav-link" %>
-      <%# </div> %>
-
-    <div class="intro_box">
-      <h1>Welcome to the Bosham Oil Syndicate</h1>
-      <h3>Please log in to access your account and view the BOS fuel</h3>
-      <br>
-      <div class="about">
-        <%= link_to "About the site", about_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+      <div class="intro_box">
+        <h1>Welcome to the Bosham Oil Syndicate</h1>
+        <h3>Please log in to access your account and view the BOS fuel</h3>
+        <br>
+        <div class="about">
+          <%= link_to "About the site", about_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+        </div>
       </div>
-  </div>
         <div class="which_root">
                   <div class="row p-5 top-hero text-center justify-content-around">
                       <div class="user col-md-3 col-sm-5">
                           <%= link_to "User", new_user_registration_path( status: { status:"user" }),class: "btn btn-block btn-pink btn-site p-4 text-uppercase cta home-button", style: "color:white"%>
                       </div>
                       <div class="admin col-md-3 col-sm-5">
-                        <%= link_to "admin", new_admin_registration_path( status: { status:"admin" } ),class: "btn btn-block btn-pink btn-site p-4 text-uppercase cta home-button", style: "color:white" %>
+                        <%= link_to "admin", admin_session_path( status: { status:"admin" } ),class: "btn btn-block btn-pink btn-site p-4 text-uppercase cta home-button", style: "color:white" %>
                       </div>
                   </div>
           </div>
-
-
     <% end %>
 </div>

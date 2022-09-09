@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations" }
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  post "/signup", to: "users#create"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
   get '/dashboard_forms', to: 'dashboard_forms#index', as: :form_for_admin
   get '/information_forms', to: 'information_forms#index', as: :form_for_user
   # Defines the root path route ("/")
-  # root "articles#index"
   get "about", to: "pages#about", as: :about
   get 'users' => 'users#primary', as: :user_root
   get 'admins' => 'dashboard_forms#index', as: :admin_root

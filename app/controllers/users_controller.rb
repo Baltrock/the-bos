@@ -8,9 +8,9 @@ class UsersController < ApplicationController
 
   # GET /user/1 or /user/1.json
   def show
-    @fuel_needed = @fuel_needed
-    @name = @name
-    @user = current_user
+    # @fuel_needed = @fuel_needed
+    # @name = @name
+    # @user = current_user
     @user = User.find(params[:id])
       respond_to do |format|
         format.html # show.html.erb
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       end
       info = JSON.parse(url_s)
       @infos = info["value"]
+    render json: @current_user
   end
 
   def user
@@ -34,7 +35,9 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
+    user = User.create(user_params)
+    session[:user_id] = user.id
+    render json:user, status: :created
 
     respond_to do |format|
       if @user.save
@@ -79,5 +82,6 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:name)
+      params.permit(:username, :password, :password_confirmation)
     end
 end

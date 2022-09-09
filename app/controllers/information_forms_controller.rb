@@ -1,28 +1,34 @@
 class InformationFormsController < ApplicationController
   before_action :set_information_form, only: %i[ show edit update destroy ]
 
-  # GET /information_forms or /information_forms.json
   def index
-    @information_forms = InformationForm.all
+    if current_user.admin?
+      @information_forms = Information_form.all
+    else
+      @information_forms = Information_forms.where(user: current_user)
+    end
   end
+    # @information_forms = InformationForm.all
+    # @information_forms = policy_scope(InformationForm)
+    # If current_user.admin?
+    #   @information_forms = Information_form.all
+    #   @information_forms = Information_forms.where(user: current_user)
 
-  # GET /information_forms/1 or /information_forms/1.json
   def show
     @information_forms = InformationForm.all
   end
 
-  # GET /information_forms/new
   def new
     @information_form = InformationForm.new
   end
 
-  # GET /information_forms/1/edit
   def edit
   end
 
-  # POST /information_forms or /information_forms.json
   def create
+
     @information_form = InformationForm.new(information_form_params)
+    @information_form.user = current_user
 
     respond_to do |format|
       if @information_form.save

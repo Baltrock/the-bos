@@ -8,7 +8,7 @@ class CreateInformationForms < ActiveRecord::Migration[7.0]
       t.integer :fuel_needed
       t.string :instructions_for_delivery
       t.string :comment
-      t.references :user, null: false, foreign_key: true
+      t.references :user_id
 
       t.timestamps
     end

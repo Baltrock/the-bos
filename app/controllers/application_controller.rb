@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :address, :fuel_limit, :current_fuel_volume, :required_fuel, :instructions_for_delivery])

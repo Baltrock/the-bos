@@ -4,20 +4,13 @@ class DashboardFormsController < ApplicationController
   # GET /dashboard_forms or /dashboard_forms.json
   def index
     @dashboard_forms = DashboardForm.all
-    @information_form = InformationForm.all
   end
 
   # GET /dashboard_forms/1 or /dashboard_forms/1.json
   def show
     @dashboard_forms = DashboardForm.all
-    # @information_forms = InformationForms.all
   end
 
-  def information_form
-    @information_forms = InformationForms.all
-  end
-
-  # GET /dashboard_forms/new
   def new
     @dashboard_form = DashboardForm.new
   end

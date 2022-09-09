@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_17_112418) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_145314) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_17_112418) do
     t.integer "fuel_needed"
     t.string "instructions_for_delivery"
     t.string "comment"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_information_forms_on_user_id"
@@ -70,5 +70,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_17_112418) do
   end
 
   add_foreign_key "dashboard_forms", "admins"
-  add_foreign_key "information_forms", "users"
 end

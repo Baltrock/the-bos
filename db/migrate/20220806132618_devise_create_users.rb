@@ -1,4 +1,6 @@
 class DeviseCreateUsers < ActiveRecord::Migration[7.0]
+  def has_secure_password
+  end
   def change
     create_table :users do |t|
       ## Database authenticatable
