@@ -3,15 +3,18 @@ class InformationFormsController < ApplicationController
 
   def index
     if current_user.admin?
-      @information_forms = Information_form.all
+      @information_form = InformationForm.all
     else
-      @information_forms = Information_forms.where(user: current_user)
+      @information_forms = InformationForm.where(user: current_user)
     end
   end
-    @information_forms = InformationForm.all
 
   def show
-    @information_forms = InformationForm.all
+    if current_user.admin?
+      @information_forms = InformationForm.all
+    else
+      @information_forms = InformationForm.where(user: current_user)
+    end
   end
 
   def new

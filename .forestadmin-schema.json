@@ -85,22 +85,6 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "information_forms",
-      "type": ["Number"],
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": false,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": "InformationForm.id",
-      "inverse_of": "admin",
-      "relationship": "HasMany",
-      "widget": null,
-      "validations": []
-    }, {
       "field": "is_admin",
       "type": "Boolean",
       "default_value": "true",
@@ -417,22 +401,6 @@
       "is_virtual": false,
       "reference": null,
       "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "admin",
-      "type": "Number",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": "Admin.id",
-      "inverse_of": "information_forms",
-      "relationship": "BelongsTo",
       "widget": null,
       "validations": []
     }, {

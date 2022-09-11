@@ -12,8 +12,54 @@
   width: 180px;
 }
 
-.box //this is the outer box
-{
+.card1 {
+  width: fit-content;
+}
+
+.card2 {
+  height: fit-content;
+  padding: 30px;
+  padding-top: 35px;
+  width: 250px;
+  background-color: green;
+}
+
+.card3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  flex-grow: 1;
+  grid-template-rows: 1fr;
+}
+
+.card4 {
+  grid-template-rows: 1fc 1fc 1fc 1fc;
+}
+
+.rows {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  background-color: #99CC01;
+  padding: 20px;
+  align-content: center;
+  width: max-content;
+}
+
+.description {
+  background-color: #99CC01;
+  padding: 20px;
+  width: max-content;
+}
+
+.end {
+  background-color: #99CC01;
+  padding: 20px;
+  width: max-content;
+}
+
+.box {
   padding: 10px;
   width: 200px;
   height: fit-content;
@@ -41,22 +87,14 @@
 
 .chicken {
   display: flex;
-  justify-content: space-between;
   background-color: #FFF97F;
   width: fit-content;
   padding-top: 20px;
+  justify-content: center;
 }
 
 .new_company {
   background-color: aquamarine;
-}
-
-.card2 {
-  height: fit-content;
-  padding: 30px;
-  padding-top: 35px;
-  width: 250px;
-  background-color: green;
 }
 
 .row {
@@ -68,10 +106,13 @@
 
 .row2 {
   background-color: green;
-  display: flex;
-  width: fit-content;
-  align-content: center;
+  display: grid;
+  width: 1000px;
+  align-self: center;
   margin: auto 0;
+  padding: 10px;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 600px;
 }
 
 .container {
@@ -84,6 +125,13 @@
   // align-content: center;
   margin: auto 0;
   padding: 20px;
+}
+
+.container3 {
+  margin: auto 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 @media(max-width: 992px) {

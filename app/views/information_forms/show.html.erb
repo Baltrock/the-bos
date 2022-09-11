@@ -4,14 +4,7 @@
 
 <div>
 
-  <% if policy(@information_form).edit? %>
-      <%= link_to "Edit this information form", edit_information_form_path(@information_form) %> |
-  <% end %>
-  <%= button_to "Destroy this information form", @information_form, method: :delete if policy(@information_form).destroy? %>
-
-
-  <%# <%= link_to "Edit this information form", edit_information_form_path(@information_form) %>
-  <%# <%= link_to "Back to information forms", information_forms_path %>
-
-  <%# <%= button_to "Destroy this information form", @information_form, method: :delete %>
+  <%= link_to "Edit this information form", edit_information_form_path(@information_form) %><br>
+  <%= link_to "Back to information forms", information_forms_path %>
+  <%= button_to "Destroy this information form", @information_form, method: :delete %>
 </div>
