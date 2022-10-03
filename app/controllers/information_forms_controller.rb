@@ -31,7 +31,7 @@ class InformationFormsController < ApplicationController
 
     respond_to do |format|
       if @information_form.save
-        format.html { redirect_to information_form_url(@information_form), notice: "Information form was successfully created." }
+        format.html { redirect_to information_form_url(@information_form), notice: "Your input has been registered." }
         format.json { render :show, status: :created, location: @information_form }
       else
         format.html { render :new, status: :unprocessable_entity }

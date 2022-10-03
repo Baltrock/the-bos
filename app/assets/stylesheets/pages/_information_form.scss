@@ -1,0 +1,66 @@
+
+.background3 {
+  background-image: asset-url('cool_background.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 800px;
+  padding: 30px;
+  margin: auto 0;
+}
+
+.new-info {
+  background-color: #99CC01;
+  margin: 20px;
+  padding: 10px;
+}
+
+.user-butt {
+  margin-left: 20px;
+}
+
+.button-edit {
+  text-align: center;
+}
+
+.fillout {
+  margin: 20px;
+  padding: 10px;
+  background-color: #8d9d5b;
+  width: 500px;
+  height: fit-content;
+}
+
+.return {
+  text-align: center;
+}
+
+.my-info {
+  background-color: #8d9d5b;
+  padding: 10px;
+}
+
+.inform {
+  background-color: #99CC01;
+  padding: 20px;
+  width: 600px;
+  height: fit-content;
+  float: right;
+}
+
+.create-new {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+}
+.create-new:hover {
+  color: black;
+}
+
+.primary {
+  margin: auto 0;
+  width: 700px;
+  height: fit-content;
+  float: right;
+}

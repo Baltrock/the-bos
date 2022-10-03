@@ -1,21 +1,45 @@
-
 <%= simple_form_for(@dashboard_form) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :company_name %>
-    <%= f.input :company_address %>
-    <%= f.input :representative_name %>
-    <%= f.input :phone_number %>
-    <%= f.input :pence_per_litre %>
-    <%= f.input :comment %>
-    <%= f.input :date_of_call%>
-    <%= f.input :rating %>
-    <%= f.association :admin %>
+    <div class="area1">
+      <div class="col-5">
+        <%= f.input :company_name %>
+      </div>
+      <div class="col-5">
+        <%= f.input :company_address %>
+      </div>
+    </div>
+    <div class="area1">
+      <div class="col-5">
+        <%= f.input :representative_name %>
+      </div>
+      <div class="col-5">
+        <%= f.input :phone_number %>
+      </div>
+    </div>
+    <div class="area1">
+      <div class="col-5">
+        <%= f.input :pence_per_litre %>
+      </div>
+      <div class="col-5">
+        <%= f.input :comment %>
+      </div>
+    </div>
+    <div class="timing col-10">
+      <%= f.input :date_of_call%>
+    </div>
+    <div class="area1">
+      <div class="col-5">
+        <%= f.input :rating %>
+      </div>
+      <%# <div class="col-5"> %>
+        <%# <%= f.association :admin %>
+      <%# </div> %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions col-6">
+    <%= f.button :submit, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
   </div>
 <% end %>

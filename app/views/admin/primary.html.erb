@@ -4,23 +4,3 @@
   <h5>At the very bottom of the page. </h5>
   <h5>As updates are made to this site, key parts are likely to change, including a reset of the comment table every 24 hours and more interactive features.</h5>
   <%= link_to "Company Input page", form_for_admin_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
-  <br>
- <%= link_to "Log out", destroy_admin_session_path, data: {turbo_method: :delete} %>
-
-</div>
-
-
-<%= render dashboard_forms_url %>
-
-<p>
- <strong>Fuel Needed: </strong>
- <%= @fuel_needed %>
-</p>
-  <%# <p>Name: <%= @user %></p>
-  <%# <p>Fuel Needed:</p> %>
-<%# <ul> %>
-  <%# <% @user.fuel_needed.each do |fuel_needed| %>
-    <%# <li><%= fuel_needed %>
-  <%# <% end %>
-<%# </ul> %>
-<%# </p> %>

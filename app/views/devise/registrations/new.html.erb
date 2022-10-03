@@ -1,4 +1,4 @@
-<%= render "devise/shared/links" %>
+
 <div class="pagey">
     <div class="footsteps-up">
       <div class="page">
@@ -6,25 +6,38 @@
             <%= simple_form_for(resource, as: resource_name, url: user_registration_path, data: {turbo: false}) do |f| %>
                 <%= f.error_notification %>
 
-                <div class="form-inputs">
+              <div class="form-inputs">
+                <div class="passage">
                   <%= f.input :email,
                               required: true,
                               # autofocus: true,
                               input_html: { autocomplete: "email" }%>
-                  <%= f.input :password,
-                              required: true,
-                              hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                              input_html: { autocomplete: "new-password" } %>
-                  <%= f.input :password_confirmation,
-                              required: true,
-                              input_html: { autocomplete: "new-password" } %>
                 </div>
-
-              <div class="form-actions", style="width: 380px; margin: auto;">
-                <%= f.submit "SIGN UP", data: {turbo: false}, :class => "purple-login-button text:uppercase" %>
-                <br>
+                <div class="align">
+                  <div class="pass col-5">
+                    <%= f.input :password,
+                                required: true,
+                                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                                input_html: { autocomplete: "new-password" } %>
+                  </div>
+                  <div class="pass col-5">
+                    <%= f.input :password_confirmation,
+                                required: true,
+                                input_html: { autocomplete: "new-password" } %>
+                  </div>
+                </div>
               </div>
 
+
+
+              <div class="form-actions", style="width: 380px;">
+                  <div class="signup-option-1"></div>
+                <%= render "devise/shared/links", class: "btn" %>
+                <div class="signup-option-1"></div>
+                  <%= f.submit "SIGN UP", data: {turbo: false}, :class => "btn" %>
+                <br>
+              </div>
+                <br>
               <div class="about">
                 <%= link_to "Back to the Home Page", root_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
               </div>

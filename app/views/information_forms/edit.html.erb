@@ -1,10 +1,13 @@
-<h1>Editing information form</h1>
+<div class="background3">
+  <div class="inform">
+    <h3>Please make any/all necessary edits</h3>
 
-<%= render "form", information_form: @information_form %>
+    <%= render "form", information_form: @information_form %>
 
-<br>
+    <br>
 
-<div>
-  <%= link_to "Show this information form", @information_form %> |
-  <%= link_to "Back to information forms", information_forms_path %>
+    <div class="button-edit">
+      <%= link_to "Cancel information input", information_forms_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+    </div>
+  </div>
 </div>

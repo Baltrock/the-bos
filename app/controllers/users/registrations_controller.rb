@@ -3,15 +3,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_account_update_params, only: [:update]
   protected
 
-  # def password_digest
-  # end
-
-  # def ActionController
-  # end
-
-  # def create
-  # end
-
   def after_sign_in_path(resource)
     if resource.is_admin
       :admins_path

@@ -1,7 +1,4 @@
 // Specific CSS for your home-page
-.index {
-  background-color: #99CC01;
-}
 .intro_box {
   height: fit-content;
 }
@@ -17,24 +14,62 @@
 .user {
   background-color: aquamarine;
   width: fit-content;
+  padding: 10px;
   margin: 10px;
   color: black;
+}
+
+.intro_box {
+  display: flex;
+  // justify-items: auto;
+  //
+}
+
+.logo {
+  // justify-content: space-evenly;
+  display: flex;
+  background-repeat: repeat-y;
+  align-items: center;
+  height: 100px;
+  // width: 70px;
 }
 
 .admin {
   background-color: bisque;
   width: fit-content;
+  padding: 10px;
   margin: 10px;
   color: black;
 }
 
 .background2 {
-  background-color: rgb(115, 194, 115);
+  // background-color: rgb(115, 194, 115);
+  background-image: asset-url('bos-main-pic.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 800px;
 }
 
 .index {
-  background-color: #99CC01;
+  // background-color: #99CC01;
   margin: 20px;
-  align-self: center;
-  padding: 10px;
+  justify-content: space-evenly;
+  padding: 20px;
+  display: flex;
+}
+
+.bulky {
+  width: 600px;
+  padding: 20px;
+  background-color: #99CC01;
+}
+
+.signup {
+  text-align: center;
+}
+
+.signup2 {
+  text-align: center;
 }

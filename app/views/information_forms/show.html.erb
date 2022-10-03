@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @information_form %>
+<div class="background3">
+  <div class="inform">
+    <div class="fillout">
+      <%= render @information_form %>
+    </div>
 
-<div>
-
-  <%= link_to "Edit this information form", edit_information_form_path(@information_form) %><br>
-  <%= link_to "Back to information forms", information_forms_path %>
-  <%= button_to "Destroy this information form", @information_form, method: :delete %>
+      <div class="user-butt">
+        <%= link_to "Edit my information", edit_information_form_path(@information_form), class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+        <%= link_to "Back to My Dashboard", information_forms_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+        <%= button_to "Reset information", @information_form, method: :delete, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+      </div>
+  </div>
 </div>

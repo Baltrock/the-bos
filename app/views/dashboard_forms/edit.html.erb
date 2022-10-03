@@ -1,10 +1,12 @@
-<h1>Editing Dashboard form</h1>
+<div class="entirity">
+  <div class="inform2">
+    <div class="title2"><h1>Editing Company</h1></div>
 
-<%= render "form", dashboard_form: @dashboard_form %>
+    <%= render "form", dashboard_form: @dashboard_form %>
 
-<br>
 
-<div>
-  <%= link_to "Show this company", @dashboard_form %> |
-  <%= link_to "Back to company", dashboard_forms_path %>
+    <div class="central"><br>
+      <%= link_to "Back to your dashboard", dashboard_forms_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+    </div>
+  </div>
 </div>

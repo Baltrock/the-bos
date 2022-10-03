@@ -1,9 +1,13 @@
-<h1>New information form</h1>
+<div class="background3">
+  <div class="inform">
+    <h1>Please fill in all boxes: </h1>
 
-<%= render "form", information_form: @information_form %>
+    <%= render "form", information_form: @information_form %>
 
-<br>
+    <br>
 
-<div>
-  <%= link_to "Back to information forms", information_forms_path %>
+    <div class="return">
+      <%= link_to "Go back", information_forms_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+    </div>
+  </div>
 </div>

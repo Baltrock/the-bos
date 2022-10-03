@@ -1,6 +1,5 @@
 <div class="box">
   <div class="row">
-
     <div class="card">
       <div id="<%= dom_id dashboard_form %>">
         <%# <p> %>
@@ -25,7 +24,7 @@
 
         <%# <p> %>
           <%# <strong>Date of Call:</strong> %>
-          <%= dashboard_form.date_of_call.strftime('%H:%M:%S') %> <br>
+          <%= dashboard_form.date_of_call.strftime('%D') %> <br>
         <%# </p> %>
 
         <%# <p> %>
@@ -34,7 +33,7 @@
         <%# </p> %>
 
       </div>
-      <%= link_to "Edit", dashboard_form %>
+      <%= link_to "More info", dashboard_form, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
     </div>
   </div>
 </div>

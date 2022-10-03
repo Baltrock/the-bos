@@ -25,7 +25,7 @@ class DashboardFormsController < ApplicationController
 
     respond_to do |format|
       if @dashboard_form.save
-        format.html { redirect_to dashboard_form_url(@dashboard_form), notice: "Dashboard form was successfully created." }
+        format.html { redirect_to dashboard_form_url(@dashboard_form), notice: "New Company was successfully created." }
         format.json { render :show, status: :created, location: @dashboard_form }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class DashboardFormsController < ApplicationController
   def update
     respond_to do |format|
       if @dashboard_form.update(dashboard_form_params)
-        format.html { redirect_to dashboard_form_url(@dashboard_form), notice: "Dashboard form was successfully updated." }
+        format.html { redirect_to dashboard_form_url(@dashboard_form), notice: "Company Updated." }
         format.json { render :show, status: :ok, location: @dashboard_form }
       else
         format.html { render :edit, status: :unprocessable_entity }
