@@ -9,6 +9,15 @@
   grid-gap: 16px;
   align-content: center;
   margin: auto 0;
+  height: fit-content;
+}
+
+.alignment {
+  display: flex;
+  background-color: #99CC01;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
 }
 
 .user {
@@ -58,12 +67,14 @@
   justify-content: space-evenly;
   padding: 20px;
   display: flex;
+  height: fit-content;
 }
 
 .bulky {
   width: 600px;
   padding: 20px;
   background-color: #99CC01;
+  height: fit-content;
 }
 
 .signup {

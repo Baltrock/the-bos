@@ -71,6 +71,6 @@ class InformationFormsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def information_form_params
-      params.require(:information_form).permit(:name, :address, :fuel_needed, :instructions_for_delivery, :comment)
+      params.require(:information_form).permit(:name, :address, :fuel_needed, :phone_number, :instructions_for_delivery, :comment)
     end
 end

@@ -4,6 +4,6 @@
     <h5>This is the Bosham Oil Syndicate *BOS*. Please select the button below and go to your syndicate form. This site is currently in its 'Beta form'.</h5>
     <h5>In the next version, a 'Meeting Room' will be accessible 24/7 for 1-2-1 communication with the adminstrator. For the time being, please use your 'comment' option to provide key information to the head of the Bosham Oil Syndicate.</h5><br>
     <%= link_to "Fill in your Syndicator form", form_for_user_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
-    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+    <%= button_to "Log out", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
   </div>
 </div>

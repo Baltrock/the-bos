@@ -18,19 +18,22 @@
             <div class="m-8" ><h1 class="text-center-logo"><strong>The<br> BOS</strong></h1></div>
           </div>
         </div>
-          <h3>Welcome to the <strong>B</strong>osham <strong>O</strong>il <strong>S</strong>yndicate! Please select if you are an administrator or user.</h3>
+          <h3>Please select if you are a returning user, new user or the administrator</h3>
           <br>
           <div class="about">
             <%= link_to "About the site", about_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
           </div>
       </div>
-        <div class="which_root col-12 col-md-6">
-                  <div class="row p-5 top-hero text-center justify-content-around">
+        <div class="which_root">
+                  <div class="alignment">
                       <div class="user col-5">
-                        <%= link_to "User", new_user_registration_path( status: { status:"user" }), class: "btn btn-pink text-grey text-uppercase fw-bold", style: "color:black"%>
+                        <%= link_to "User", user_session_path( status: { status:"user" }), class: "btn btn-pink text-grey text-uppercase fw-bold", style: "color:black"%>
                       </div>
                       <div class="admin col-5">
                         <%= link_to "admin", admin_session_path( status: { status:"admin" }), class: "btn btn-pink text-grey text-uppercase fw-bold", style: "color:black" %>
+                      </div><br>
+                      <div class="user col-5">
+                        <%= link_to "New User", new_user_registration_path( status: { status:"user" }), class: "btn btn-pink text-grey text-uppercase fw-bold", style: "color:black"%>
                       </div>
                   </div>
         </div>

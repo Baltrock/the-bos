@@ -3,22 +3,23 @@
   <div class="middle">
     <div class="row-primary">
     <div class="rows">
-          <div class="row2 col-4">
+          <div class="row2 col-5">
               <div class="card3">
+                <div class="demand2">demand</div>
                 <div class="card4">
-                  <strong>Name:</strong> <br>
+                  <div class="what"><strong>Name: </strong></div>
                   <% InformationForm.all.each do |form|%>
                     <%= form.name%><br>
                   <% end %>
                 </div>
                 <div class="card5">
-                  <strong>Fuel Requested</strong><br>
+                  <div class="what"><strong>Fuel Requested</strong></div>
                   <% InformationForm.all.each do |form|%>
                   <%= form.fuel_needed %>l<br>
                   <% end %>
                 </div>
                 <div class="card6">
-                  <strong>Comments</strong> <br>
+                  <div class="what"><strong>Comments</strong></div>
                   <% InformationForm.all.each do |form|%>
                     <div class="hoverinfo"> <span class="dispatch">comment</span>
                       <p><%= form.comment %></p>
@@ -32,7 +33,7 @@
           <%# <div class="container2 col-8"> %>
           <%# <div class="row"> %>
             <%# <div class="card-key col-5"> %>
-              <%# <div class="central"><%= link_to "New company", new_dashboard_form_path, class: "btn btn-pink text-black text-uppercase rounded-pill fw-bold py-3 px-5" %>
+
               <%# <div id="dashboard_forms" class="scroll"> %>
                 <%# <% @dashboard_forms.each do |dashboard_form| %>
                   <%# <%= render dashboard_form %>
@@ -40,40 +41,43 @@
               <%# </div> %>
             <%# </div> %>
           <%# </div> %>
-          <div class="container2 col-8">
+          <%# <div class="container2 col-8"> %>
             <div class="row">
+                  <%# SUPPLY RIGHT, DEMAND LEFT!!!!!!!! %>
+
               <div class="bigcard">
-                    <div class="officialcard2">
+                <div class="demand">supply</div>
+                    <div class="officialcard">
                       <strong>Name:</strong> <br>
                       <% DashboardForm.all.each do |form|%>
                         <%= form.company_name%><br>
                       <% end %>
                     </div>
-                    <div class="officialcard2">
-                      <strong>Representative</strong><br>
+                    <div class="officialcard1">
+                      <strong>Rep.</strong><br>
                       <% DashboardForm.all.each do |form|%>
                       <%= form.representative_name %><br>
                       <% end %>
                     </div>
-                    <div class="officialcard">
+                    <div class="officialcard2">
                       <strong>Phone No.</strong> <br>
                       <% DashboardForm.all.each do |form|%>
                       <%= form.phone_number %><br>
                       <% end %>
                     </div>
-                    <div class="officialcard">
+                    <div class="officialcard3">
                       <strong>Price</strong> <br>
                       <% DashboardForm.all.each do |form|%>
                       <%= form.pence_per_litre %>p<br>
                       <% end %>
                     </div>
-                    <div class="officialcard">
+                    <div class="officialcard4">
                       <strong>Last call</strong> <br>
                       <% DashboardForm.all.each do |form|%>
                       <%= form.date_of_call.strftime('%D') %><br>
                       <% end %>
                     </div>
-                    <div class="officialcard">
+                    <div class="officialcard5">
                       <strong> </strong> <br>
                       <% DashboardForm.all.each do |form|%>
                         <div class="hoverinfo"> <span class="dispatch">comment</span>
@@ -81,10 +85,10 @@
                         </div>
                       <% end %>
                     </div>
-                    <div class="officialcard">
+                    <div class="officialcard6">
                       <strong> </strong> <br>
                       <% DashboardForm.all.each do |form|%>
-                      <%= link_to "Edit", edit_dashboard_form_path(form) %><br>
+                      <%= link_to "Edit", edit_dashboard_form_path(form), class: "text-decoration-none" %><br>
                       <% end %>
                     </div>
                   </div>
@@ -96,18 +100,22 @@
                   </div>
                   <div class="big_number">
                     <h3><strong>Fuel Needed: </strong></h3>
-                    <strong><%= InformationForm.all.sum(:fuel_needed) %> litres</strong>
+                    <div class="bob"><%= InformationForm.all.sum(:fuel_needed) %> litres</div>
                   </div>
-                  <%# <div class="big_number">
-                    <strong><h3>Average Price: </h3></strong>
-                    <%# <strong><%= DashboardForm.average(:pence_per_litre) %>
-                  <%# </div> %>
+                  <div class="key_buttons">
+                  <div class="create_new"><%= link_to "Create Supplier", new_dashboard_form_path, class: "btn btn-pink text-black text-uppercase rounded-pill fw-bold py-3 px-5" %></div>
+                  <div class="btn btn-pink text-black text-uppercase rounded-pill fw-bold py-3 px-5"><a href="mailto: <%= User.pluck(:email).join(',') %>", class="email_link"><strong>Email Syndicators</strong></a></div>
+                  <div class="about">
+                  <%= link_to "Print User Information", show_admin_users_path, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+          </div>
+                  </div>
                 </div>
 
               </div>
 
             </div>
-        </div>
+        <%# </div> %>
+        <%# THIS WORKS=> <button onclick="window.print()">Print this page</button> %>
 </div>
     </div>
   </div>

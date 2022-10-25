@@ -1,0 +1,32 @@
+<div class="print">
+  <div class="printable">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Fuel Needed</th>
+        <th>Phone Number</th>
+        <th>Fuel Directions</th>
+
+      </tr>
+      <% InformationForm.all.each do |form| %>
+        <tr>
+          <td><%= form.name %></td>
+          <td><%= form.address %></td>
+          <td><%= form.fuel_needed %>l</td>
+          <td><%= form.phone_number %></td>
+          <td><%= form.instructions_for_delivery %></td>
+          <%# <td><%= form.comment %>
+        </tr>
+      <% end %>
+    </table>
+
+  </div>
+
+<br>
+  <div class="big_number_print">
+    <h3><strong>Fuel Needed: </strong></h3>
+    <div class="collective"><%= InformationForm.all.sum(:fuel_needed) %> litres</div>
+  </div>
+  <button onclick="window.print()">Print this page</button>
+</div>

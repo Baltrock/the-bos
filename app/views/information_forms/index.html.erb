@@ -14,7 +14,7 @@
     <% else %>
       <strong><%= link_to "Create your fuel form", new_information_form_path, :class => "create-new" %></strong><br><br>
     <% end %>
-    <%= link_to "Back to User Main Page", user_registration_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+    <%= link_to "Back to the Main Page", user_registration_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
     <% if @information_forms.count == 1 %>
       <br><br><p>* Your information has been sent to the sites administrator. Feel free to update it when ever necessary.</p>
     <% end %>

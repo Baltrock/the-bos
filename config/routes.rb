@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/information_forms', to: 'information_forms#index', as: :form_for_user
   # Defines the root path route ("/")
   get "about", to: "pages#about", as: :about
+  get "show_admin_users", to: 'pages#show_admin_users', as: :show_admin_users
   get 'users' => 'users#primary', as: :user_root
   get 'admins' => 'dashboard_forms#index', as: :admin_root
 end
